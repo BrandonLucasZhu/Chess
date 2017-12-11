@@ -12,7 +12,7 @@ public class Board {
 		}
 	}
 	
-	public Point get_point(int x, int y) {
+	public Point getPoint(int x, int y) {
 	        return grid[x][y];
 	}
 	

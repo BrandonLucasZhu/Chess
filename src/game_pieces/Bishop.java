@@ -1,5 +1,5 @@
 package game_pieces;
 
-public class Bishop {
+public class Bishop extends Pieces{
 
 }

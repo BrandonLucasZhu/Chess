@@ -1,5 +1,12 @@
 package game_pieces;
 
-public class King {
+import chess_game.Point;
 
+public class King extends Pieces{
+
+	King (Boolean isWhite,Point startCoordinate,Point endCoordinate){
+		super(isWhite,startCoordinate,endCoordinate);
+	}
+	
+	
 }

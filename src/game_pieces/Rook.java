@@ -1,5 +1,5 @@
 package game_pieces;
 
-public class Rook {
+public class Rook extends Pieces{
 
 }

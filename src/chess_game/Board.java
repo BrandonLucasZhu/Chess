@@ -16,6 +16,9 @@ public class Board {
 	        return grid[x][y];
 	}
 	
+	public Point tryToMove(Point x,Point y) {
+		return x;
+	}
 	
 
 }

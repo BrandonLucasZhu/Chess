@@ -1,13 +1,20 @@
 package chess_game;
+import game_pieces.Pond;
+import game_pieces.Bishop;
+import game_pieces.Horse;
+import game_pieces.King;
+import game_pieces.Queen;
+import game_pieces.Rook;
+
 
 public class Pieces {
 	
-	private Boolean isWhite; 
+	private String colour; 
 	private Point startCoordinate;
 	private Point endCoordinate;
 	
-	Pieces(Boolean isWhite, Point startCoordinate, Point endCoordinate) {
-		this.isWhite = isWhite;
+	protected Pieces(String colour, Point startCoordinate, Point endCoordinate) {
+		this.colour = colour;
 		this.startCoordinate = startCoordinate;
 		this.endCoordinate = endCoordinate; 
 	}
@@ -20,8 +27,8 @@ public class Pieces {
 		return endCoordinate;
 	}
 	
-	public Boolean getColour() {
-		return isWhite;
+	public String getColour() {
+		return colour;
 	}
 	
 	

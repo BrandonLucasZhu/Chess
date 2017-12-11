@@ -7,11 +7,10 @@ public class King extends Pieces{
 	private int x_movement; // Linear and diagonal direction
 	private int y_movement;
 	private String colour; //White or black
-	private String displayKing;
 	
-	King (String colour,Point startCoordinate,Point endCoordinate,String displayKing){
-		super(colour,startCoordinate,endCoordinate);
-		this.displayKing = displayKing;
+	
+	King (String colour,Point startCoordinate){
+		super(colour,startCoordinate);
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

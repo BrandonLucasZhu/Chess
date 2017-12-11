@@ -10,9 +10,8 @@ public class Pond extends Pieces{
 	private String colour; //White or black
 	private String displayPond;
 	
-	Pond (String colour,Point startCoordinate,Point endCoordinate,String displayPond){
-		super(colour,startCoordinate,endCoordinate);
-		this.displayPond = displayPond;
+	Pond (String colour,Point startCoordinate){
+		super(colour,startCoordinate);
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

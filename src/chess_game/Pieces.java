@@ -10,22 +10,23 @@ import game_pieces.Rook;
 public class Pieces {
 	
 	private String colour; 
-	private Point startCoordinate;
-	private Point endCoordinate;
+	private Point location;
+
 	
-	protected Pieces(String colour, Point startCoordinate, Point endCoordinate) {
+	protected Pieces(String colour, Point location) {
 		this.colour = colour;
-		this.startCoordinate = startCoordinate;
-		this.endCoordinate = endCoordinate; 
+		this.location = location;
+
 	}
 	
-	public Point getStartCoord() {
-		return startCoordinate;
+	public Point getLocation() {
+		return location;
 	}
 	
-	public Point getEndCoord() {
-		return endCoordinate;
+	public void setLocation(Point newLocation) {
+		location = newLocation;
 	}
+	
 	
 	public String getColour() {
 		return colour;

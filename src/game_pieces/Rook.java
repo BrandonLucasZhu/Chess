@@ -7,10 +7,11 @@ public class Rook extends Pieces{
 	private int x_movement; // Linear direction
 	private int y_movement;
 	private String colour; //White or black
+	private String displayRook;
 	
-	Rook (String colour,Point startCoordinate,Point endCoordinate){
+	Rook (String colour,Point startCoordinate,Point endCoordinate, String displayRook){
 		super(colour,startCoordinate,endCoordinate);
-		
+		this.displayRook = displayRook;
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

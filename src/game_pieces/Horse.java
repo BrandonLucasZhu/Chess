@@ -7,10 +7,11 @@ public class Horse extends Pieces{
 	private int x_movement; // L shape path
 	private int y_movement;
 	private String colour; //White or black
+	private String displayHorse;
 	
-	Horse (String colour,Point startCoordinate,Point endCoordinate){
+	Horse (String colour,Point startCoordinate,Point endCoordinate,String displayHorse){
 		super(colour,startCoordinate,endCoordinate);
-		
+		this.displayHorse = displayHorse;
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

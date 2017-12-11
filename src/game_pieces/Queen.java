@@ -7,10 +7,11 @@ public class Queen extends Pieces{
 	private int x_movement; // Linear and diagonal direction
 	private int y_movement;
 	private String colour; //White or black
+	private String displayQueen;
 	
-	Queen (String colour,Point startCoordinate,Point endCoordinate){
+	Queen (String colour,Point startCoordinate,Point endCoordinate,String displayQueen){
 		super(colour,startCoordinate,endCoordinate);
-		
+		this.displayQueen = displayQueen;
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

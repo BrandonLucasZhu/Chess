@@ -11,7 +11,7 @@ public class Point {
 		this.boardPrint = boardPrint;
 	}
 	 
-	public	int getX() {
+	public int getX() {
 		return x; 
 	}
 	

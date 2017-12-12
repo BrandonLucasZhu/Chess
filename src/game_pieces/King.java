@@ -1,4 +1,5 @@
 package game_pieces;
+import chess_game.Board;
 import chess_game.Pieces;
 import chess_game.Point;
 
@@ -9,8 +10,8 @@ public class King extends Pieces{
 	private String colour; //White or black
 	
 	
-	King (String colour,Point startCoordinate){
-		super(colour,startCoordinate);
+	public King (String colour,Point startCoordinate,Board board){
+		super(colour,startCoordinate,board);
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

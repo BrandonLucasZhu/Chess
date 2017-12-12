@@ -1,5 +1,7 @@
 package game_pieces;
 import java.lang.Math;
+
+import chess_game.Board;
 import chess_game.Pieces;
 import chess_game.Point;
 
@@ -8,10 +10,10 @@ public class Pond extends Pieces{
 	private int x_movement; //+1 or -1 Y-direction
 	private int y_movement;; // +1 or -1 X-direction
 	private String colour; //White or black
-	private String displayPond;
 	
-	Pond (String colour,Point startCoordinate){
-		super(colour,startCoordinate);
+	
+	public Pond (String colour,Point startCoordinate,Board board){
+		super(colour,startCoordinate,board);
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

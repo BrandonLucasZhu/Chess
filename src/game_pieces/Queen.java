@@ -10,8 +10,8 @@ public class Queen extends Pieces{
 	private String colour; //White or black
 	
 	
-	public Queen (String colour,Point startCoordinate){
-		super(colour,startCoordinate);
+	public Queen (String colour,Point startCoordinate,Board board){
+		super(colour,startCoordinate,board);
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

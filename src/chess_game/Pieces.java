@@ -11,20 +11,21 @@ public class Pieces {
 	
 	private String colour; 
 	private Point location;
-
+	private Board board;
 	
-	protected Pieces(String colour, Point location) {
+	protected Pieces(String colour, Point location, Board board) {
 		this.colour = colour;
 		this.location = location;
-
+		this.board = board;
+		board.replacePoint(location);
 	}
 	
 	public Point getLocation() {
-		return location;
+		return board.getPoint(location.getX(),location.getY());
 	}
 	
-	public void setLocation(Point newLocation) {
-		location = newLocation;
+	public void setLocation(Point prevLocation, Point newLocation) {
+		board.Move(prevLocation, newLocation);
 	}
 	
 	

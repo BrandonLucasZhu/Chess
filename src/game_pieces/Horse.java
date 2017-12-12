@@ -1,4 +1,5 @@
 package game_pieces;
+import chess_game.Board;
 import chess_game.Pieces;
 import chess_game.Point;
 
@@ -8,8 +9,8 @@ public class Horse extends Pieces{
 	private int y_movement;
 	private String colour; //White or black
 	
-	Horse (String colour,Point startCoordinate){
-		super(colour,startCoordinate);
+	public Horse (String colour,Point startCoordinate,Board board){
+		super(colour,startCoordinate,board);
 	}
 	
 	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

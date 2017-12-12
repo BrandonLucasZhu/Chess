@@ -7,22 +7,26 @@ public class Board {
 	public Board() {
 		for (int i = 0; i < grid.length;i++) {
 			for (int j=0; j < grid[i].length;j++) {
-				this.grid[i][j] = new Point(i,j,"0");//Create board
+				this.grid[i][j] = new Point(i,j,"00");//Create board
 			}
 		}
 	}
 	
-	public void replacePoint() {
-		
+	public void replacePoint(Point location) {
+		grid[location.getX()][location.getY()]=location;
 	}
 	
 	public Point getPoint(int x, int y) {
-	        return grid[x][y];
+	     return grid[x][y];
 	}
 	
-	public Point tryToMove(Point x,Point y) {
-		return x;
+	public void Move(Point initial,Point end) {
+		grid[end.getX()][end.getY()].setPrint(initial.getPrint()); //Set piece to new location
+		grid[initial.getX()][initial.getY()].setPrint(end.getPrint()); // Change old location to blank tile
 	}
+	
+	
+	
 	
 	public void displayBoard(){
 		

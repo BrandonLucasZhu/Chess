@@ -4,7 +4,11 @@ import game_pieces.*;
 
 public class Main {
 	
-	private static Board chessBoard = new Board(); 
+	private static Board chessBoard = new Board();
+	private static String player1 = "Black's turn";
+	private static String player2= "White's turn";
+	private static int counter=0;
+	private static Boolean winner = false;
 	
 	public static void setupGame() {
 	
@@ -39,8 +43,20 @@ public class Main {
 	
 	public static void main(String[] args){
 		setupGame();
-		chessBoard.displayBoard();
+		while (winner == false) {
+			chessBoard.displayBoard();
+			if (counter % 2 == 0) {
+				System.out.println(player1);
+			}
+			else {
+				System.out.println(player2);
+			}
+			
+			Scanner turn_command = new Scanner(System.in);
+			String input_command = turn_command.nextLine();
 		
+			counter++;
+		}
 	}
 	
 	

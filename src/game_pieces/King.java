@@ -14,7 +14,7 @@ public class King extends Pieces{
 		super(colour,startCoordinate,board);
 	}
 	
-	public Point moveType(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
+	public Boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
 		int Ax = startCoordinate.getX();
 		int Ay = startCoordinate.getY();
 		int Bx = endCoordinate.getX();

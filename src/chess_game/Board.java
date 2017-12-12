@@ -12,9 +12,17 @@ public class Board {
 		}
 	}
 	
-	public void replacePoint(Point location) {
+	public void replacePoint(Point location) { //Method to set-up initial start of the game
 		grid[location.getX()][location.getY()]=location;
 	}
+	
+	public Boolean isPiece(Point pieceLocation) { //Check if that coordinate has a piece
+		if (grid[pieceLocation.getX()][pieceLocation.getY()].getPrint() != "00") {
+			return true; //Check if not an empty spot
+		}
+		return false; 
+	}
+	
 	
 	public Point getPoint(int x, int y) {
 	     return grid[x][y];
@@ -26,10 +34,7 @@ public class Board {
 	}
 	
 	
-	
-	
 	public void displayBoard(){
-		
 		for (int i = grid[0].length-1; i >= 0; i--){
 		      for (int j = grid.length-1; j >= 0; j--){
 		    	  System.out.print(grid[j][i].getPrint() + " ");

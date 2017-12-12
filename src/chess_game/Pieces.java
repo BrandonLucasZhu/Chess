@@ -24,18 +24,8 @@ public class Pieces {
 		return board.getPoint(location.getX(),location.getY());
 	}
 	
-	public void setLocation(Point prevLocation, Point newLocation) {
-		board.Move(prevLocation, newLocation);
-	}
-	
-	
 	public String getColour() {
 		return colour;
-	}
-	
-	
-	public Boolean canMove() {
-		return true;
 	}
 	
 	

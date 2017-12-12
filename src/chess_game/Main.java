@@ -52,9 +52,26 @@ public class Main {
 				System.out.println(player2);
 			}
 			
-			Scanner turn_command = new Scanner(System.in);
-			String input_command = turn_command.nextLine();
-		
+			System.out.println("Enter Piece name");
+			Scanner pickPiece = new Scanner(System.in);
+			String inputPiece = pickPiece.nextLine();
+			
+			System.out.println("Enter coordinate x");
+			Scanner turnCommandX = new Scanner(System.in);
+			int inputX = turnCommandX.nextInt();
+			
+			System.out.println("Enter coordinate y");
+			Scanner turnCommandY = new Scanner(System.in);
+			int inputY = turnCommandY.nextInt();
+			
+			
+			
+			Point commandPoint = new Point(inputX,inputY,inputPiece)
+			
+			chessBoard.get(inputX,inputY);
+			
+			
+			
 			counter++;
 		}
 	}

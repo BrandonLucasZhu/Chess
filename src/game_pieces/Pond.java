@@ -24,6 +24,7 @@ public class Pond extends Pieces{
 		
 		x_movement = Bx - Ax; 
 		y_movement = By - Ay;
+		boolean isValid;
 		
 		
 		if ((Ay == 6 || Ay == 1) && Math.abs(y_movement) <= 2 && pieceExists == false)  {

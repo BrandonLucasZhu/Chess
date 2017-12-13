@@ -22,14 +22,19 @@ public class Rook extends Pieces{
 		
 		x_movement = Bx - Ax; 
 		y_movement = By - Ay;
+		boolean isValid; 
 		
 		if (x_movement == 0 && y_movement != 0) {
-			startCoordinate = endCoordinate; 
+			isValid = true; 
+		}
+		else if (x_movement != 0 && y_movement == 0) {
+			isValid = true;
 		}
 		else {
-			startCoordinate = endCoordinate;
+		isValid = false;
 		}
-		return startCoordinate;
+		
+		return isValid;
 	}
 		
 

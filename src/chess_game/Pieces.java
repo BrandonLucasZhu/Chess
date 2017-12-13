@@ -7,7 +7,7 @@ import game_pieces.Queen;
 import game_pieces.Rook;
 
 
-public class Pieces {
+public abstract class Pieces {
 	
 	private String colour; 
 	private Point location;
@@ -28,5 +28,6 @@ public class Pieces {
 		return colour;
 	}
 	
+	public abstract boolean moveTypeValid();
 	
 }

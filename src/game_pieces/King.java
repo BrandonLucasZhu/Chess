@@ -14,26 +14,30 @@ public class King extends Pieces{
 		super(colour,startCoordinate,board);
 	}
 	
-	public Boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
+	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
 		int Ax = startCoordinate.getX();
 		int Ay = startCoordinate.getY();
 		int Bx = endCoordinate.getX();
 		int By = endCoordinate.getY();
+		Boolean isValid;
 		
 		x_movement = Bx - Ax; 
 		y_movement = By - Ay;
 		
+		
 		if (x_movement == 0 && y_movement == 1) {
-			startCoordinate = endCoordinate; //Linear direction
+			isValid = true; //Linear direction
 		}
 		else if (x_movement != 0 && y_movement == 1) {
-			startCoordinate = endCoordinate;
+			isValid = true;
 		}
 		else if (Math.abs(x_movement) == 1 && Math.abs(y_movement) == 1) {
-			startCoordinate = endCoordinate; //diagonal direction
+			isValid = true; //diagonal direction
 		}
-		
-		return startCoordinate;
+		else {
+			isValid = false;
+		}
+		return isValid;
 		
 	}
 		

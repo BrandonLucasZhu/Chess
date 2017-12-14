@@ -28,6 +28,11 @@ public abstract class Pieces {
 		return colour;
 	}
 	
-	public abstract boolean moveTypeValid();
+	public void moveTo() {
+		
+	}
+	
+	
+	public abstract boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour);
 	
 }

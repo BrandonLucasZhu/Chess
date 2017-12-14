@@ -14,7 +14,7 @@ public class Rook extends Pieces{
 		super(colour,startCoordinate,board);
 	}
 	
-	public Boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
+	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
 		int Ax = startCoordinate.getX();
 		int Ay = startCoordinate.getY();
 		int Bx = endCoordinate.getX();

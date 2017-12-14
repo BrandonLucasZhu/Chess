@@ -16,7 +16,7 @@ public class Pond extends Pieces{
 		super(colour,startCoordinate,board);
 	}
 	
-	public Boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
+	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
 		int Ax = startCoordinate.getX();
 		int Ay = startCoordinate.getY();
 		int Bx = endCoordinate.getX();
@@ -28,23 +28,20 @@ public class Pond extends Pieces{
 		
 		
 		if ((Ay == 6 || Ay == 1) && Math.abs(y_movement) <= 2 && pieceExists == false)  {
-			Ay = Ay + y_movement;
-			startCoordinate.setY(Ay); //Allowed to move two spaces for first move
+			//Allowed to move two spaces for first move
+			isValid = true;
 		}
 		else if (Math.abs(y_movement) == 1) {
-			Ay = Ay + y_movement;
-			startCoordinate.setY(Ay); //Allowed to only move one space regular move
+			//Allowed to only move one space regular move
+			isValid = true;
 		}
 		else if (Math.abs(x_movement) == 1 && Math.abs(y_movement) == 1 && pieceExists == true) {
-			Ax = Ax + x_movement;
-			Ay = Ay + y_movement;
-			startCoordinate.setX(Ax);
-			startCoordinate.setY(Ay);
+			isValid = true;
 		}
 		else {
-			startCoordinate = endCoordinate; //Return piece back to original spot cause of illegal move
+			isValid = false; //Return piece back to original spot cause of illegal move
 		}
-	return startCoordinate; 	
+	return isValid;	
 	}
 	
 	

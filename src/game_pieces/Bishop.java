@@ -15,21 +15,24 @@ public class Bishop extends Pieces{
 		super(colour,startCoordinate,board);
 	}
 	
-	public Boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
+	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
 		int Ax = startCoordinate.getX();
 		int Ay = startCoordinate.getY();
 		int Bx = endCoordinate.getX();
 		int By = endCoordinate.getY();
-		
+		Boolean isValid;
 		x_movement = Bx - Ax; 
 		y_movement = By - Ay;
 		
 
 		if (x_movement == y_movement) {
-			startCoordinate = endCoordinate; //diagonal direction
+			isValid = true; //diagonal direction
+		}
+		else {
+			isValid = false;
 		}
 		
-		return startCoordinate;
+		return isValid;
 		
 	}
 		

@@ -7,11 +7,10 @@ public class Rook extends Pieces{
 	
 	private int x_movement; // Linear direction
 	private int y_movement;
-	private String colour; //White or black
-
 	
-	public Rook (String colour,Point startCoordinate,Board board){
-		super(colour,startCoordinate,board);
+	
+	public Rook (String colour,Point startCoordinate,String type){
+		super(colour,startCoordinate,type);
 	}
 	
 	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {
@@ -31,7 +30,7 @@ public class Rook extends Pieces{
 			isValid = true;
 		}
 		else {
-		isValid = false;
+			isValid = false;
 		}
 		
 		return isValid;

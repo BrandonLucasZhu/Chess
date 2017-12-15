@@ -11,8 +11,8 @@ public class Bishop extends Pieces{
 	private String colour; //White or black
 	
 	
-	public Bishop (String colour,Point startCoordinate,Board board){
-		super(colour,startCoordinate,board);
+	public Bishop (String colour,Point startCoordinate,String type){
+		super(colour,startCoordinate,type);
 	}
 	
 	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

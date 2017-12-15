@@ -10,8 +10,8 @@ public class King extends Pieces{
 	private String colour; //White or black
 	
 	
-	public King (String colour,Point startCoordinate,Board board){
-		super(colour,startCoordinate,board);
+	public King (String colour,Point startCoordinate,String type){
+		super(colour,startCoordinate,type);
 	}
 	
 	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

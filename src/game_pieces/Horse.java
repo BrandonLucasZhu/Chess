@@ -9,8 +9,8 @@ public class Horse extends Pieces{
 	private int y_movement;
 	private String colour; //White or black
 	
-	public Horse (String colour,Point startCoordinate,Board board){
-		super(colour,startCoordinate,board);
+	public Horse (String colour,Point startCoordinate,String type){
+		super(colour,startCoordinate,type);
 	}
 	
 	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

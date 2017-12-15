@@ -5,15 +5,15 @@ import chess_game.Board;
 import chess_game.Pieces;
 import chess_game.Point;
 
-public class Pond extends Pieces{
+public class Pawn extends Pieces{
 
 	private int x_movement; //+1 or -1 Y-direction
 	private int y_movement;; // +1 or -1 X-direction
-	private String colour; //White or black
 	
 	
-	public Pond (String colour,Point startCoordinate,Board board){
-		super(colour,startCoordinate,board);
+	
+	public Pawn (String colour,Point startCoordinate,String type){
+		super(colour,startCoordinate,type);
 	}
 	
 	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

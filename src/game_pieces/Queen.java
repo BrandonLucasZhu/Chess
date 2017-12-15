@@ -1,7 +1,5 @@
 package game_pieces;
-import chess_game.Pieces;
 import chess_game.*;
-import chess_game.Point;
 
 public class Queen extends Pieces{
 
@@ -10,8 +8,8 @@ public class Queen extends Pieces{
 	private String colour; //White or black
 	
 	
-	public Queen (String colour,Point startCoordinate,Board board){
-		super(colour,startCoordinate,board);
+	public Queen (String colour,Point startCoordinate,String type){
+		super(colour,startCoordinate,type);
 	}
 	
 	public boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour) {

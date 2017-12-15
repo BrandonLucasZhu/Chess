@@ -11,17 +11,17 @@ public abstract class Pieces {
 	
 	private String colour; 
 	private Point location;
-	private Board board;
+	private String type;
 	
-	protected Pieces(String colour, Point location, Board board) {
+	
+	public Pieces(String colour, Point location, String type) {
 		this.colour = colour;
 		this.location = location;
-		this.board = board;
-		board.replacePoint(location);
+		this.type = type;
 	}
 	
 	public Point getLocation() {
-		return board.getPoint(location.getX(),location.getY());
+		return location;
 	}
 	
 	
@@ -30,13 +30,20 @@ public abstract class Pieces {
 		return colour;
 	}
 	
+	
+	@Override
+	public String toString(){
+	    return null;
+	}
+	
+	/*
 	public void moveTo(Point startCoordinate, Point endCoordinate,Boolean pieceExists, String colour) {
 		if (this.moveTypeValid(startCoordinate,endCoordinate, pieceExists, colour)) {
-			board.Move(startCoordinate, endCoordinate);
+			Move(startCoordinate, endCoordinate);
 		}
 		
 	}
-	
+	*/
 	
 	public abstract boolean moveTypeValid(Point startCoordinate, Point endCoordinate, Boolean pieceExists, String colour);
 	

@@ -12,33 +12,33 @@ public class Main {
 	
 	public static void setupGame() {
 	
-		King blackKing = new King("black", new Point(3,7,"BK"),chessBoard);
-		King whiteKing = new King("white", new Point(3,0,"WK"),chessBoard);
+		chessBoard.addReplacePiece(new King("black", new Point(3,7,"BK"),"KING"));
+		chessBoard.addReplacePiece(new King("white", new Point(3,0,"WK"),"KING"));
 		
-		Queen blackQueen = new Queen("black", new Point(4,7,"BQ"),chessBoard);
-		Queen whiteQueen = new Queen("white", new Point(4,0,"WQ"),chessBoard);
+		chessBoard.addReplacePiece(new Queen("black", new Point(4,7,"BQ"),"QUEEN"));
+		chessBoard.addReplacePiece(new Queen("white", new Point(4,0,"WQ"),"QUEEN"));
 	
 		for (int i = 0; i<8; i++) {
-			Pond blackPond = new Pond("black", new Point(i,6,"BP"),chessBoard);
-			Pond whitePond = new Pond("white", new Point(i,1,"WP"),chessBoard);
+			chessBoard.addReplacePiece(new Pawn("black", new Point(i,6,"BP"), "PAWN"));
+			chessBoard.addReplacePiece(new Pawn("white", new Point(i,1,"WP"), "PAWN"));
 		}
 	
-		Rook blackRook1 = new Rook("black", new Point(0,7,"BR"),chessBoard);
-		Rook blackRook2 = new Rook("black", new Point(7,7,"BR"),chessBoard);
-		Rook whiteRook1 = new Rook("white", new Point(0,0,"WR"),chessBoard);
-		Rook whiteRook2 = new Rook("white", new Point(7,0,"WR"),chessBoard);
+		chessBoard.addReplacePiece(new Rook("black", new Point(0,7,"BR"),"ROOK"));
+		chessBoard.addReplacePiece(new Rook("black", new Point(7,7,"BR"),"ROOK"));
+		chessBoard.addReplacePiece(new Rook("white", new Point(0,0,"WR"),"ROOK"));
+		chessBoard.addReplacePiece(new Rook("white", new Point(7,0,"WR"),"ROOK"));
 		
-		Bishop blackbishop1 = new Bishop("black", new Point(2,7,"BB"),chessBoard);
-		Bishop blackbishop2 = new Bishop("black", new Point(5,7,"BB"),chessBoard);
+		chessBoard.addReplacePiece(new Bishop("black", new Point(2,7,"BB"),"BISHOP"));
+		chessBoard.addReplacePiece(new Bishop("black", new Point(5,7,"BB"),"BISHOP"));
 	
-		Bishop whitebishop1 = new Bishop("white", new Point(2,0,"WB"),chessBoard);
-		Bishop whitebishop2 = new Bishop("white", new Point(5,0,"WB"),chessBoard);
+		chessBoard.addReplacePiece(new Bishop("white", new Point(2,0,"WB"),"BISHOP"));
+		chessBoard.addReplacePiece(new Bishop("white", new Point(5,0,"WB"),"BISHOP"));
 	
-		Horse blackHorse1 = new Horse("black", new Point(1,7,"BH"),chessBoard);
-		Horse blackHorse2 = new Horse("black", new Point(6,7,"BH"),chessBoard);
+		chessBoard.addReplacePiece(new Horse("black", new Point(1,7,"BH"),"HORSE"));
+		chessBoard.addReplacePiece(new Horse("black", new Point(6,7,"BH"),"HORSE"));
 		
-		Horse whiteHorse1 = new Horse("black", new Point(1,0,"BH"),chessBoard);
-		Horse whiteHorse2 = new Horse("black", new Point(6,0,"BH"),chessBoard);
+		chessBoard.addReplacePiece(new Horse("white", new Point(1,0,"WH"),"HORSE"));
+		chessBoard.addReplacePiece(new Horse("white", new Point(6,0,"WH"),"HORSE"));
 	}
 	
 	public static void main(String[] args){
@@ -76,6 +76,7 @@ public class Main {
 			
 			Point finalPoint = new Point(inputX2,inputY2,inputPiece);
 			
+			chessBoard.movePieceTo(initialPoint,finalPoint);
 			
 			
 			

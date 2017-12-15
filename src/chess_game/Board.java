@@ -11,6 +11,9 @@ public class Board {
 			}
 		}
 	}
+
+	
+	
 	
 	public void replacePoint(Point location) { //Method to set-up initial start of the game
 		grid[location.getX()][location.getY()]=location;

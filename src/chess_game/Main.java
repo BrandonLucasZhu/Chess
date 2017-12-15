@@ -56,19 +56,30 @@ public class Main {
 			Scanner pickPiece = new Scanner(System.in);
 			String inputPiece = pickPiece.nextLine();
 			
-			System.out.println("Enter coordinate x");
+			System.out.println("Enter coordinate initial x");
 			Scanner turnCommandX = new Scanner(System.in);
 			int inputX = turnCommandX.nextInt();
 			
-			System.out.println("Enter coordinate y");
+			System.out.println("Enter coordinate initial y");
 			Scanner turnCommandY = new Scanner(System.in);
 			int inputY = turnCommandY.nextInt();
 			
+			Point initialPoint = new Point(inputX,inputY,inputPiece);
+			
+			System.out.println("Enter coordinate final x");
+			Scanner turnCommandX2 = new Scanner(System.in);
+			int inputX2 = turnCommandX2.nextInt();
+			
+			System.out.println("Enter coordinate final y");
+			Scanner turnCommandY2 = new Scanner(System.in);
+			int inputY2 = turnCommandY2.nextInt();
+			
+			Point finalPoint = new Point(inputX2,inputY2,inputPiece);
 			
 			
-			Point commandPoint = new Point(inputX,inputY,inputPiece)
 			
-			chessBoard.get(inputX,inputY);
+			
+			//chessBoard.get(inputX,inputY);
 			
 			
 			

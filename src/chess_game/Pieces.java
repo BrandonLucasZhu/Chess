@@ -24,11 +24,16 @@ public abstract class Pieces {
 		return board.getPoint(location.getX(),location.getY());
 	}
 	
+	
+	
 	public String getColour() {
 		return colour;
 	}
 	
-	public void moveTo() {
+	public void moveTo(Point startCoordinate, Point endCoordinate,Boolean pieceExists, String colour) {
+		if (this.moveTypeValid(startCoordinate,endCoordinate, pieceExists, colour)) {
+			board.Move(startCoordinate, endCoordinate);
+		}
 		
 	}
 	

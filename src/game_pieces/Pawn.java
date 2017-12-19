@@ -27,7 +27,7 @@ public class Pawn extends Pieces{
 		boolean isValid;
 		
 		
-		if ((Ay == 6 || Ay == 1) && Math.abs(y_movement) <= 2 && pieceExists == false)  {
+		if ((Ay == 6 || Ay == 1) && Math.abs(y_movement) <= 2)  {
 			//Allowed to move two spaces for first move
 			isValid = true;
 		}

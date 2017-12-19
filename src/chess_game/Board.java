@@ -25,7 +25,7 @@ public class Board {
 	}
 	
 	public void movePieceTo(Point initialCoord, Point finalCoord) {
-		grid[finalCoord.getX()][finalCoord.getX()].setPrint(piece[initialCoord.getX()][initialCoord.getY()].getLocation().getPrint()); 
+		grid[finalCoord.getX()][finalCoord.getY()].setPrint(piece[initialCoord.getX()][initialCoord.getY()].getLocation().getPrint()); 
 		grid[initialCoord.getX()][initialCoord.getY()].setPrint("00"); //Set previous board space blank
 		piece[finalCoord.getX()][finalCoord.getX()]=piece[initialCoord.getX()][initialCoord.getY()];
 		piece[initialCoord.getX()][initialCoord.getY()] = null;
@@ -44,6 +44,28 @@ public class Board {
 	     return grid[x][y];
 	}
 	
+	public void check_win(Pieces whiteking, Pieces blackking){
+		for (int i = 0; i < piece.length; i++) {
+			for (int j = 0; j <piece[0].length; j++) {
+				//Loop through the whole board check all the pieces to see
+				//if it can check the king
+				if (piece[i][j] != null && piece[i][j].getType() != "KING" && piece[i][j].getColour != "white") {
+					//Check if the piece can move onto the king spot if yes then the king is either check or checkmate
+					if (piece[i][j].moveTypeValid(piece[i][j].getLocation(),blackking.getLocation(), True, "black")) {
+						System.out.println("King is in check");
+					}
+						
+				}
+				else if (piece[i][j] != null && piece[i][j].getType() != "KING" && piece[i][j].getColour != "black") {
+					if (piece[i][j].moveTypeValid(piece[i][j].getLocation(),whiteking.getLocation(), True, "white")) {
+						System.out.println("King is in check");
+					}
+				}
+				
+				
+			}
+		}
+	}	
 	/*
 	public void Move(Point initial,Point end) {
 		grid[end.getX()][end.getY()].setPrint(initial.getPrint()); //Set piece to new location

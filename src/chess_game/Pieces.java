@@ -24,6 +24,9 @@ public abstract class Pieces {
 		return location;
 	}
 	
+	public String getType() {
+		return type;
+	}
 	
 	
 	public String getColour() {
@@ -35,6 +38,26 @@ public abstract class Pieces {
 	public String toString(){
 	    return null;
 	}
+	
+	
+	/*8 queens project after
+	 * 
+	 * Win method() loop through all the pieces check if the king is in check or checkmate
+	 * 
+	 * another project
+	 * two families of classes that would implement the functionality in different ways
+	 * 
+	 * project
+	 * subject observer pattern handling notifications
+	 * When one object is changed then all other objects are notified and changed
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
 	
 	/*
 	public void moveTo(Point startCoordinate, Point endCoordinate,Boolean pieceExists, String colour) {
